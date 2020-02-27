@@ -1,10 +1,11 @@
 # ansible-mongodb
-Ansible Project to install and configure users on MongoDB
+Ansible Project to install and configure MongoDB & Users in Database
 
-Example Playbook
+# First download Repo
+$ git clone git@github.com:TecnoRV/ansible-mongodb.git
+
+# Run the playbook in your working path
 ----------------
-You can run playbook in your working path
-
 $ ansible-playbook mongodb.yml
 
 PLAY [mongoservers] **************************************************************************************************************************************************************************************************************
@@ -48,3 +49,6 @@ changed: [localhost]
 
 PLAY RECAP ***********************************************************************************************************************************************************************************************************************
 localhost                  : ok=11   changed=6    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0 
+
+
+You can also check in your MongoDB with shell tool the configuration & users created
