@@ -1,0 +1,28 @@
+---
+# tasks file for mongousers
+- name: Create admin user list
+  mongodb_user:
+   database: "{{ database_name }}"
+   name: "{{ item }}"
+   password: "{{ psswd_admin }}"
+   state: present
+   roles: dbAdmin
+  with_items: "{{ users_adminlist }}"
+
+- name: Create Viewer user list
+  mongodb_user:
+   database: "{{ database_name }}"
+   name: "{{ item }}"
+   password: "{{ psswd_viewer }}"
+   state: present
+   roles: read
+  with_items: "{{ users_viewerlist }}"
+
+- name: Create Developer user list
+  mongodb_user:
+   database: "{{ database_name }}"
+   name: "{{ item }}"
+   password: "{{ psswd_dev }}"
+   state: present
+   roles: readWrite
+  with_items: "{{ users_adminlist }}"

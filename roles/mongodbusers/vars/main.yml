@@ -1,0 +1,14 @@
+---
+# vars file for mongodbusers
+users_adminlist:
+ - mongoadmin
+users_viewerlist:
+ - mongoviewer
+ - mongoreporter
+users_devlist:
+ - mongodeveloper
+
+psswd_admin: Super123
+psswd_viewer: temp1234
+psswd_dev: Dev1234
+database_name: admin
